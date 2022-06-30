@@ -1,0 +1,93 @@
+ul {
+    min-height: 200px;
+}
+
+input {
+    width: 100%;
+}
+
+button {
+    width: 100%;
+    margin-top: 20px;
+    transition: all 250ms ease-out;
+}
+
+button:hover {
+    background-color: #3c3c3c;
+    color: #FDF7F1;
+    border-radius: 12px;
+}
+
+.widescreen-btn {
+    display: none;
+}
+
+@media screen and (min-width: 700px) {
+    input {
+        width: 60%;
+        display: block;
+        margin: auto;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    label {
+        margin: 20px 0;
+    }
+
+    ul {
+        margin: 30px auto;
+        width: 80%;
+        word-wrap: break-word;
+        overflow-y: scroll;
+    }
+
+    button {
+        width: 20%;
+        margin-top: 20px;
+        transition: all 250ms ease-out;
+        background-color: #3c3c3c !important;
+        color: #FDF7F1 !important;
+
+        border-radius: 12px;
+    }
+
+    button:hover {
+        background-color: rgba(0, 0, 0, .7) !important;
+        border-radius: 12px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .widescreen-btn {
+        display: block;
+        position: relative;
+        bottom: 10px;
+        left: 10px;
+    }
+
+    .mobile-btn {
+        display: none;
+    }
+}
+
+main {
+    margin: 20px;
+}
+
+main img:first-of-type {
+    width: 50px;
+    border: none !important;
+}
+
+main img:last-of-type {
+    width: 50px;
+    border: none !important;
+    float: right;
+}

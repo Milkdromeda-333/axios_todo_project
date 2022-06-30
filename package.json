@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "axios": "^0.27.2",
+    "doodle.css": "^0.0.2"
+  }
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do using Axios</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Short+Stack&display=swap');
+
+        body {
+            font-family: 'Short Stack', cursive;
+        }
+    </style>
+    <link rel="stylesheet" href="node_modules/doodle.css/doodle.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body class="doodle">
+    <main class="border">
+        <img src="node_modules/doodle.css/icon.png" alt="star icon">
+        <img src="node_modules/doodle.css/icon.png" alt="star icon">
+        <h1>My To-Do List:</h1>
+        <hr>
+        <form name="myForm">
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name">
+
+            <label for="listItem">To-Do:</label>
+            <input type="text" name="listItem" id="listItem">
+
+            <label for="description">(optional) Description:</label>
+            <input type="text" name="description" id="description">
+            <button class="mobile-btn">Submit</button>
+            <ul class="border">
+                <!-- To be filled with JS -->
+                <p>Nothing here yet......</p>
+            </ul>
+            <button class="widescreen-btn">Submit</button>
+        </form>
+
+    </main>
+    <script src="app.js"></script>
+</body>
+
+</html>
