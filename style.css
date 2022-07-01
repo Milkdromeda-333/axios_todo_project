@@ -6,6 +6,10 @@ input {
     width: 100%;
 }
 
+input:focus {
+    outline: 3px solid rgb(246, 94, 190);
+}
+
 button {
     width: 100%;
     margin-top: 20px;
