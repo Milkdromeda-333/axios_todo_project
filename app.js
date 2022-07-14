@@ -9,6 +9,7 @@ let getData = axios.get(url)
     .then(response => addCurrentList(response.data))
     .catch(err => console.log(err));
 
+
 // this updates the list to have all of the current items
 const addCurrentList = (data) => {
     // this allows there to be a notification that there is no data yet if ther is none. 
@@ -20,6 +21,11 @@ const addCurrentList = (data) => {
     for (let listData of data) {
         let listItem = document.createElement("li");
         listItem.innerHTML = listData.title + ": " + listData.description;
+        if (listData.completed === true) {
+            listItem.style.textDecoration = "line-through";
+            listItem.style.textDecorationColor = "red";
+        }
+        let img = listData.imgUrl;
         ul.appendChild(listItem);
     }
 };

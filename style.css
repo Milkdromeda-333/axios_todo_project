@@ -98,3 +98,7 @@ main img:last-of-type {
     border: none !important;
     float: right;
 }
+
+li:hover {
+    color: red;
+}
