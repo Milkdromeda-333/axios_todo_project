@@ -1,3 +1,7 @@
+:root {
+    --pink: rgb(246, 94, 190);
+}
+
 ul {
     min-height: 200px;
 }
@@ -7,7 +11,7 @@ input {
 }
 
 input:focus {
-    outline: 3px solid rgb(246, 94, 190);
+    outline: 3px solid var(--pink);
 }
 
 button {
@@ -26,7 +30,31 @@ button:hover {
     display: none;
 }
 
-/* WIdescreens */
+main {
+    margin: 20px;
+}
+
+main img:first-of-type {
+    width: 50px;
+    border: none !important;
+}
+
+main img:last-of-type {
+    width: 50px;
+    border: none !important;
+    float: right;
+}
+
+li {
+    padding: 25px;
+    border-bottom: 1px solid;
+}
+
+li:hover {
+    color: var(--pink);
+}
+
+/* Widescreens */
 @media screen and (min-width: 700px) {
     input {
         width: 60%;
@@ -82,23 +110,4 @@ button:hover {
     .mobile-btn {
         display: none;
     }
-}
-
-main {
-    margin: 20px;
-}
-
-main img:first-of-type {
-    width: 50px;
-    border: none !important;
-}
-
-main img:last-of-type {
-    width: 50px;
-    border: none !important;
-    float: right;
-}
-
-li:hover {
-    color: red;
 }

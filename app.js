@@ -24,13 +24,14 @@ const addCurrentList = (data) => {
         listItem.innerHTML = listData.title + ": " + listData.description;
         if (listData.completed === true) {
             listItem.style.textDecoration = "line-through";
-            listItem.style.textDecorationColor = "red";
+            listItem.style.textDecorationColor = "rgb(246, 94, 190)";
         }
 
         let imgUrl = listData.imgUrl;
         if (imgUrl !== undefined) {
             const img = document.createElement("img");
             img.src = imgUrl;
+            // img.setAttribute("style", "float: ;");
             listItem.appendChild(img);
         }
 
