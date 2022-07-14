@@ -11,6 +11,7 @@ let getData = axios.get(url)
 
 
 // this updates the list to have all of the current items
+
 const addCurrentList = (data) => {
     // this allows there to be a notification that there is no data yet if ther is none. 
     if (!data) {
@@ -25,7 +26,14 @@ const addCurrentList = (data) => {
             listItem.style.textDecoration = "line-through";
             listItem.style.textDecorationColor = "red";
         }
-        let img = listData.imgUrl;
+
+        let imgUrl = listData.imgUrl;
+        if (imgUrl !== undefined) {
+            const img = document.createElement("img");
+            img.src = imgUrl;
+            listItem.appendChild(img);
+        }
+
         ul.appendChild(listItem);
     }
 };
