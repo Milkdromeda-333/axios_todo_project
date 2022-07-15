@@ -4,7 +4,7 @@ const ul = document.getElementsByTagName("ul")[0];
 const submitBtn = document.getElementsByTagName("button")[0];
 let toDo = document.getElementById("listItem").value;
 let toDoDescription = document.getElementById("listDescription").value;
-
+// this adds the current list to the screen on loading
 let getData = axios.get(url)
     .then(response => addCurrentList(response.data))
     .catch(err => console.log(err));
@@ -39,6 +39,27 @@ const addCurrentList = (data) => {
     }
 };
 
+const addNewItem = data => {
+
+    let listItem = document.createElement("li");
+    listItem.innerHTML = `${data.title}: ${data.description}`;
+
+    if (data.completed === true) {
+        listItem.style.textDecoration = "line-through";
+        listItem.style.textDecorationColor = "rgb(246, 94, 190)";
+    }
+
+    let imgUrl = data.imgUrl;
+    if (imgUrl !== undefined) {
+        const img = document.createElement("img");
+        img.src = imgUrl;
+        // img.setAttribute("style", "float: ;");
+        listItem.appendChild(img);
+    }
+
+    ul.appendChild(listItem);
+};
+
 // This adds the item after being submitted
 form.addEventListener("submit", e => {
     e.preventDefault(); // prevent refresh of the page
@@ -50,10 +71,11 @@ form.addEventListener("submit", e => {
         description: toDoDescription
     };
 
-    axios.post(url, listItem);
+    axios.post(url, listItem)
+        .then(response => addNewItem(response.data));
 
     document.getElementById("listItem").value = "";
     document.getElementById("listDescription").value = "";
 
-    getData();
+    // 
 });
