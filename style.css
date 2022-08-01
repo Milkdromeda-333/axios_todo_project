@@ -1,5 +1,6 @@
 :root {
     --pink: rgb(246, 94, 190);
+    --grey: #3c3c3c;
 }
 
 .list {
@@ -17,24 +18,20 @@ input:focus {
     outline: 3px solid var(--pink);
 }
 
-button {
+.mobile-btn {
     width: 100%;
     margin: 20px 0;
     transition: all 250ms ease-out;
 }
 
 button:hover {
-    background-color: #3c3c3c;
+    background-color: var(--grey);
     color: #FDF7F1;
     border-radius: 12px;
 }
 
 .widescreen-btn {
     display: none;
-}
-
-main {
-    margin: 20px;
 }
 
 main img:first-of-type {
@@ -86,11 +83,11 @@ p {
         overflow-y: scroll;
     }
 
-    button {
+    .widescreen-btn {
         width: 20%;
         margin-top: 40px;
         transition: all 250ms ease-out;
-        background-color: #3c3c3c !important;
+        background-color: var(--grey) !important;
         color: #FDF7F1 !important;
 
         border-radius: 12px;
@@ -116,5 +113,9 @@ p {
 
     .mobile-btn {
         display: none;
+    }
+
+    main {
+        margin: 2% 10%;
     }
 }
